@@ -16,12 +16,19 @@
     </head>
 
     <body>
+        <py-script>
+            print('compute Π')
+            def compute(n):
+                pi = 2
+                for i in range(n):
+                    pi *= 4*i**2/(4*i**2-1)
+                return pi
+            pi = compute(100)
+            print(pi)
+        </py-script>
        
 
-        <section class="pyscript">
-            <div id="mpl"></div>
-            <script type="py" src="./main.py" config="./pyscript.toml"></script>
-        </section>
+        
 
     </body>
 
